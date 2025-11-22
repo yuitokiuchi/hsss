@@ -1,14 +1,9 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const AboutPage: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-white">
-      <Header />
-      <main className="flex-grow">
-        <div className="container mx-auto px-4 py-24">
-          <div className="max-w-3xl mx-auto">
+    <div className="container mx-auto px-4 py-24">
+      <div className="max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-12">ABOUT US</h1>
             
             <div className="prose prose-lg prose-gray max-w-none">
@@ -47,9 +42,7 @@ const AboutPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </main>
-      <Footer />
-    </div>
+
   );
 };
 

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const TeamsPage: React.FC = () => {
   const teams = [
@@ -43,10 +41,7 @@ const TeamsPage: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-white">
-      <Header />
-      <main className="flex-grow">
-        <div className="container mx-auto px-4 py-24">
+    <div className="container mx-auto px-4 py-24">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">TEAMS</h1>
           <p className="text-gray-500 font-mono mb-16 max-w-xl">
             Five specialized units. One shared passion for discovery.
@@ -88,9 +83,7 @@ const TeamsPage: React.FC = () => {
             ))}
           </div>
         </div>
-      </main>
-      <Footer />
-    </div>
+
   );
 };
 

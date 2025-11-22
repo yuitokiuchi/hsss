@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const NewsPage: React.FC = () => {
   const newsItems = [
@@ -39,10 +37,7 @@ const NewsPage: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-white">
-      <Header />
-      <main className="flex-grow">
-        <div className="container mx-auto px-4 py-24">
+    <div className="container mx-auto px-4 py-24">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-16">NEWS</h1>
           
           <div className="max-w-4xl mx-auto">
@@ -71,9 +66,7 @@ const NewsPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </main>
-      <Footer />
-    </div>
+
   );
 };
 

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const HomePage: React.FC = () => {
   const teams = [
@@ -59,45 +57,42 @@ const HomePage: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-white">
-      <Header />
-
-      <main className="flex-grow">
-        {/* Hero Section */}
-        <section className="relative py-32 md:py-48 overflow-hidden border-b border-gray-100">
-          <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50"></div>
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl">
-              <p className="font-mono text-sm md:text-base text-gray-500 mb-4 tracking-widest uppercase">
-                Hiratsuka Secondary School Science Club
-              </p>
-              <h1 className="text-5xl md:text-8xl font-bold mb-8 tracking-tighter leading-none text-black">
-                EXPLORE<br />
-                THE UNKNOWN.
-              </h1>
-              <p className="text-lg md:text-xl mb-12 text-gray-600 max-w-2xl leading-relaxed">
-                We are a collective of student researchers, engineers, and explorers. 
-                Diving deep into robotics, biology, astronomy, and more.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/teams"
-                  className="inline-flex items-center justify-center bg-black text-white px-8 py-4 text-sm font-bold tracking-widest hover:bg-gray-800 transition-colors uppercase"
-                >
-                  View Teams
-                </Link>
-                <Link
-                  to="/about"
-                  className="inline-flex items-center justify-center border border-black text-black px-8 py-4 text-sm font-bold tracking-widest hover:bg-gray-50 transition-colors uppercase"
-                >
-                  About Us
-                </Link>
-              </div>
+    <>
+      {/* Hero Section */}
+      <section className="relative py-32 md:py-48 overflow-hidden border-b border-gray-100">
+        <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-50"></div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl">
+            <p className="font-mono text-sm md:text-base text-gray-500 mb-4 tracking-widest uppercase">
+              Hiratsuka Secondary School Science Club
+            </p>
+            <h1 className="text-5xl md:text-8xl font-bold mb-8 tracking-tighter leading-none text-black">
+              EXPLORE<br />
+              THE UNKNOWN.
+            </h1>
+            <p className="text-lg md:text-xl mb-12 text-gray-600 max-w-2xl leading-relaxed">
+              We are a collective of student researchers, engineers, and explorers. 
+              Diving deep into robotics, biology, astronomy, and more.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                to="/teams"
+                className="inline-flex items-center justify-center bg-black text-white px-8 py-4 text-sm font-bold tracking-widest hover:bg-gray-800 transition-colors uppercase"
+              >
+                View Teams
+              </Link>
+              <Link
+                to="/about"
+                className="inline-flex items-center justify-center border border-black text-black px-8 py-4 text-sm font-bold tracking-widest hover:bg-gray-50 transition-colors uppercase"
+              >
+                About Us
+              </Link>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Teams Section */}
+      {/* Teams Section */}
         <section className="py-24 bg-white">
           <div className="container mx-auto px-4">
             <div className="flex justify-between items-end mb-16 border-b border-gray-200 pb-4">
@@ -129,35 +124,41 @@ const HomePage: React.FC = () => {
         </section>
 
         {/* News Section */}
-        <section className="py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="flex justify-between items-end mb-16 border-b border-gray-300 pb-4">
-              <h2 className="text-3xl md:text-4xl font-bold tracking-tight">UPDATES</h2>
-              <Link to="/news" className="font-mono text-sm text-black hover:underline">VIEW ALL →</Link>
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4">LATEST NEWS</h2>
+              <p className="text-gray-500 font-mono text-sm tracking-widest uppercase">Updates from the lab</p>
             </div>
-
-            <div className="space-y-0 divide-y divide-gray-200 border-t border-b border-gray-200">
-              {newsItems.map((item) => (
-                <Link key={item.id} to="/news" className="group block py-6 hover:bg-white transition-colors px-4 -mx-4">
-                  <div className="flex flex-col md:flex-row md:items-center justify-between">
-                    <div className="flex items-center gap-4 mb-2 md:mb-0">
-                      <span className="font-mono text-xs text-gray-400">{item.date}</span>
-                      <span className="font-mono text-xs border border-gray-300 px-2 py-0.5 rounded text-gray-600">{item.tag}</span>
-                    </div>
-                    <h3 className="text-lg md:text-xl font-medium group-hover:text-gray-600 transition-colors flex-grow md:px-8">
-                      {item.title}
-                    </h3>
-                    <span className="hidden md:block text-gray-300 group-hover:text-black transition-colors">↗</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
+            <Link to="/news" className="hidden md:inline-block text-sm font-bold tracking-widest uppercase border-b border-black pb-1 hover:text-gray-600 hover:border-gray-600 transition-colors">
+              View All News
+            </Link>
           </div>
-        </section>
-      </main>
 
-      <Footer />
-    </div>
+          <div className="border-t border-gray-200">
+            {newsItems.map((item) => (
+              <Link key={item.id} to={`/news/${item.id}`} className="group block border-b border-gray-200 py-8 hover:bg-gray-50 transition-colors">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                  <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-12">
+                    <span className="font-mono text-xs text-gray-400 tracking-widest">{item.date}</span>
+                    <span className="font-mono text-xs font-bold bg-gray-100 px-2 py-1 tracking-widest">{item.tag}</span>
+                    <h3 className="text-xl font-bold group-hover:text-gray-600 transition-colors">{item.title}</h3>
+                  </div>
+                  <span className="text-gray-300 group-hover:text-black transition-colors">→</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+          
+          <div className="mt-8 md:hidden">
+            <Link to="/news" className="inline-block text-sm font-bold tracking-widest uppercase border-b border-black pb-1">
+              View All News
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 

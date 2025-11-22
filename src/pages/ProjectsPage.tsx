@@ -1,13 +1,8 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const ProjectsPage: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-white">
-      <Header />
-      <main className="flex-grow">
-        <div className="container mx-auto px-4 py-24">
+    <div className="container mx-auto px-4 py-24">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-16">PROJECTS</h1>
           
           <div className="space-y-24">
@@ -78,9 +73,7 @@ const ProjectsPage: React.FC = () => {
             </section>
           </div>
         </div>
-      </main>
-      <Footer />
-    </div>
+
   );
 };
 

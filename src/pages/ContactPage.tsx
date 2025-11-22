@@ -1,20 +1,15 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 
 const ContactPage: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-white">
-      <Header />
-      <main className="flex-grow">
-        <div className="container mx-auto px-4 py-24">
-          <div className="max-w-2xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 text-center">CONTACT</h1>
-            <p className="text-gray-500 text-center mb-16 font-light">
-              Interested in our activities? Get in touch.
-            </p>
+    <div className="container mx-auto px-4 py-24">
+      <div className="max-w-2xl mx-auto">
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-8 text-center">CONTACT</h1>
+        <p className="text-gray-500 text-center mb-16 font-light">
+          Interested in our activities? Get in touch.
+        </p>
 
-            <form className="space-y-8">
+        <form className="space-y-8">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label htmlFor="name" className="block text-xs font-bold uppercase tracking-widest text-gray-500">Name</label>
@@ -64,9 +59,7 @@ const ContactPage: React.FC = () => {
             </div>
           </div>
         </div>
-      </main>
-      <Footer />
-    </div>
+
   );
 };
 
