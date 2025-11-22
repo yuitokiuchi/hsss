@@ -6,16 +6,16 @@ import Footer from '../components/Footer';
 const HomePage: React.FC = () => {
   const teams = [
     {
-      id: 'robotics',
-      name: 'Robotics Team',
-      description: 'Building and programming autonomous robots for WRO and other competitions.',
+      id: 'lego',
+      name: 'LEGO Team',
+      description: 'Participating in WRO (World Robot Olympiad) and building autonomous robots.',
       color: 'bg-blue-100 text-blue-800',
     },
     {
-      id: 'astronomy',
-      name: 'Astronomy Team',
-      description: 'Observing celestial bodies and capturing the beauty of the universe.',
-      color: 'bg-indigo-100 text-indigo-800',
+      id: 'electronics',
+      name: 'Electronics Team',
+      description: 'Creating electronic circuits, gadgets, and learning hardware engineering.',
+      color: 'bg-yellow-100 text-yellow-800',
     },
     {
       id: 'biology',
@@ -24,31 +24,37 @@ const HomePage: React.FC = () => {
       color: 'bg-green-100 text-green-800',
     },
     {
-      id: 'electronics',
-      name: 'Electronics Team',
-      description: 'Designing circuits and creating custom electronic devices.',
-      color: 'bg-yellow-100 text-yellow-800',
+      id: 'experiment',
+      name: 'Experiment Team',
+      description: 'Conducting various chemistry and physics experiments.',
+      color: 'bg-red-100 text-red-800',
+    },
+    {
+      id: 'astronomy',
+      name: 'Astronomy Team',
+      description: 'Observing celestial bodies and capturing the beauty of the universe.',
+      color: 'bg-indigo-100 text-indigo-800',
     },
   ];
 
   const newsItems = [
     {
       id: 1,
-      title: 'Science Club Wins Regional WRO Championship',
-      date: '2023-10-15',
-      summary: 'Our Robotics team secured first place in the regional qualifiers and is heading to nationals!',
+      title: 'WRO2024 Japan Final Results',
+      date: '2024-09-08',
+      summary: 'Team "Merge sort" competed in the national finals in Toyama, placing 19th overall.',
     },
     {
       id: 2,
-      title: 'Annual Star Gazing Event Success',
-      date: '2023-09-22',
-      summary: 'Over 50 students joined us for a clear night of observing Jupiter and Saturn.',
+      title: 'WRO2024 Regional Qualifier Results',
+      date: '2024-08-27',
+      summary: 'Five teams participated, with "Merge sort" advancing to the national tournament.',
     },
     {
       id: 3,
-      title: 'New Biology Lab Equipment Arrived',
-      date: '2023-09-01',
-      summary: 'We have upgraded our microscopes to allow for more detailed cellular analysis.',
+      title: 'LEGO Team Activity Report - June',
+      date: '2024-07-07',
+      summary: 'New members joined, and preparations for the WRO summer qualifiers are underway.',
     },
   ];
 
@@ -61,10 +67,10 @@ const HomePage: React.FC = () => {
         <section className="bg-blue-700 text-white py-20 md:py-32">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Innovate. Discover. Create.
+              Hiratsuka Secondary School Science Club
             </h1>
             <p className="text-xl md:text-2xl mb-10 text-blue-100 max-w-3xl mx-auto">
-              Welcome to the Hiratsuka Secondary School Science Club. We are a community of curious minds dedicated to exploring the frontiers of science and technology.
+              Exploring Science, Technology, and Innovation. Join us in our journey of discovery with our LEGO, Electronics, Biology, Experiment, and Astronomy teams.
             </p>
             <Link
               to="/teams"

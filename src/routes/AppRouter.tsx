@@ -10,6 +10,11 @@ const routes: Array<{
   loader: () => Promise<any>;
 }> = [
   { path: '/', loader: () => import('@/pages/HomePage') },
+  { path: '/about', loader: () => import('@/pages/AboutPage') },
+  { path: '/teams', loader: () => import('@/pages/TeamsPage') },
+  { path: '/projects', loader: () => import('@/pages/ProjectsPage') },
+  { path: '/news', loader: () => import('@/pages/NewsPage') },
+  { path: '/contact', loader: () => import('@/pages/ContactPage') },
   { path: '/spelling', loader: () => import('@/features/spelling/Spelling') },
   { path: '/result', loader: () => import('@/features/result/Result') },
 ];
