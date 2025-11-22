@@ -4,65 +4,79 @@ import Footer from '../components/Footer';
 
 const ProjectsPage: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-gray-50">
+    <div className="flex flex-col min-h-screen font-sans text-gray-900 bg-white">
       <Header />
-      <main className="flex-grow container mx-auto px-4 py-12">
-        <h1 className="text-4xl font-bold text-blue-900 mb-8 text-center">Projects & Achievements</h1>
-        
-        <div className="space-y-12">
-          {/* WRO Section */}
-          <section className="bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="bg-blue-600 text-white p-6">
-              <h2 className="text-2xl font-bold">World Robot Olympiad (WRO)</h2>
-            </div>
-            <div className="p-8">
-              <p className="text-gray-700 mb-6">
-                The LEGO Team actively participates in the WRO every year. This global competition challenges students to build and program robots to solve specific tasks.
-              </p>
+      <main className="flex-grow">
+        <div className="container mx-auto px-4 py-24">
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-16">PROJECTS</h1>
+          
+          <div className="space-y-24">
+            {/* WRO Section */}
+            <section>
+              <div className="border-b border-black pb-4 mb-8 flex justify-between items-end">
+                <h2 className="text-2xl font-bold tracking-tight">WRO (World Robot Olympiad)</h2>
+                <span className="font-mono text-sm text-gray-500">COMPETITION</span>
+              </div>
               
-              <div className="mb-8">
-                <h3 className="text-xl font-bold text-gray-800 mb-3 border-l-4 border-blue-500 pl-3">2024 Season Results</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
-                  <li>
-                    <span className="font-semibold">WRO 2024 Japan Final (Toyama):</span> Team "Merge sort" placed 7th in the preliminary round and 19th in the final round.
-                  </li>
-                  <li>
-                    <span className="font-semibold">WRO 2024 Regional Qualifiers:</span>
-                    <ul className="list-circle list-inside ml-6 mt-1 space-y-1 text-gray-600">
-                      <li>Team "Merge sort": 5th Place (Qualified for Nationals)</li>
-                      <li>Team "KANIKAMA": 7th Place</li>
-                      <li>Team "DEBB_tag": 11th Place</li>
-                      <li>Team "Over Load": 14th Place</li>
-                      <li>Team "Felling": 17th Place</li>
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <div className="lg:col-span-1">
+                  <p className="text-gray-600 leading-relaxed">
+                    The LEGO Team actively participates in the WRO every year. This global competition challenges students to build and program robots to solve specific tasks.
+                  </p>
+                </div>
+                <div className="lg:col-span-2">
+                  <div className="bg-gray-50 p-8 border border-gray-100">
+                    <h3 className="font-mono font-bold text-lg mb-6">2024 SEASON RESULTS</h3>
+                    <ul className="space-y-6">
+                      <li className="flex flex-col sm:flex-row gap-4">
+                        <span className="font-mono text-xs text-gray-400 w-32 shrink-0">NATIONALS</span>
+                        <div>
+                          <p className="font-bold">WRO 2024 Japan Final (Toyama)</p>
+                          <p className="text-sm text-gray-600 mt-1">Team "Merge sort" placed 7th in preliminary, 19th in final.</p>
+                        </div>
+                      </li>
+                      <li className="flex flex-col sm:flex-row gap-4">
+                        <span className="font-mono text-xs text-gray-400 w-32 shrink-0">REGIONALS</span>
+                        <div>
+                          <p className="font-bold">WRO 2024 Regional Qualifiers</p>
+                          <ul className="mt-2 space-y-1 text-sm text-gray-600 font-mono">
+                            <li>Merge sort: 5th Place (Qualified)</li>
+                            <li>KANIKAMA: 7th Place</li>
+                            <li>DEBB_tag: 11th Place</li>
+                            <li>Over Load: 14th Place</li>
+                            <li>Felling: 17th Place</li>
+                          </ul>
+                        </div>
+                      </li>
                     </ul>
-                  </li>
-                </ul>
+                  </div>
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
 
-          {/* Other Projects Placeholder */}
-          <section className="bg-white rounded-lg shadow-md overflow-hidden">
-            <div className="bg-green-600 text-white p-6">
-              <h2 className="text-2xl font-bold">Other Activities</h2>
-            </div>
-            <div className="p-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h3 className="text-lg font-bold text-gray-800 mb-2">School Festival (Suisei-sai)</h3>
-                  <p className="text-gray-600">
-                    We exhibit our robots, electronic devices, and experiment demonstrations during the annual school culture festival.
+            {/* Other Projects */}
+            <section>
+              <div className="border-b border-black pb-4 mb-8 flex justify-between items-end">
+                <h2 className="text-2xl font-bold tracking-tight">OTHER ACTIVITIES</h2>
+                <span className="font-mono text-sm text-gray-500">EXHIBITION & RESEARCH</span>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="border border-gray-200 p-8 hover:border-black transition-colors">
+                  <h3 className="text-xl font-bold mb-4">School Festival (Suisei-sai)</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    We exhibit our robots, electronic devices, and experiment demonstrations during the annual school culture festival. It's our chance to interact with the wider school community.
                   </p>
                 </div>
-                <div>
-                  <h3 className="text-lg font-bold text-gray-800 mb-2">Regular Observations</h3>
-                  <p className="text-gray-600">
-                    The Astronomy Team conducts regular sky observation sessions, tracking planets and constellations throughout the year.
+                <div className="border border-gray-200 p-8 hover:border-black transition-colors">
+                  <h3 className="text-xl font-bold mb-4">Regular Observations</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    The Astronomy Team conducts regular sky observation sessions, tracking planets and constellations throughout the year using school telescopes.
                   </p>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
       </main>
       <Footer />
