@@ -9,7 +9,7 @@ const routes: Array<{
   path: string;
   loader: () => Promise<any>;
 }> = [
-  { path: '/', loader: () => import('@/features/home/Home') },
+  { path: '/', loader: () => import('@/pages/HomePage') },
   { path: '/spelling', loader: () => import('@/features/spelling/Spelling') },
   { path: '/result', loader: () => import('@/features/result/Result') },
 ];
